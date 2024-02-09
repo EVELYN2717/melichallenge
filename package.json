@@ -1,0 +1,14 @@
+{
+  "name": "melichallenge",
+  "version": "1.0.0",
+  "description": "meli test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Evelyn Gutierrez",
+  "license": "ISC",
+  "dependencies": {
+    "create-react-app": "^5.0.1"
+  }
+}
