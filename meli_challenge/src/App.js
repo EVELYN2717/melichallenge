@@ -1,25 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import SearchBoxPage from './pages/searchboxpage';
+import { useNavigate } from 'react-router-dom';
+import ResultSearchComponent from './pages/resultsearch';
+import ProductDetailComponent from './pages/productdetail';
 
-function App() {
+const App = () => {
+  // const navigate = useNavigate();
+  // const handleClick = () => {
+  //   navigate('/');
+  // }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header className="App-header"></header>
+      <Routes>
+        <Route path='/' element = { <SearchBoxPage/> }></Route>
+        <Route path='/itemssearch' element = { <ResultSearchComponent/> }></Route>
+        <Route path='/itemsid' element = { <ProductDetailComponent/> }></Route>
+      </Routes>
     </div>
   );
 }
+
+
 
 export default App;

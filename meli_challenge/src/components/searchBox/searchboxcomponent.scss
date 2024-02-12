@@ -1,0 +1,51 @@
+.search-box {
+    margin: 0;
+    width: 100%;
+    background-color: #ffe600;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .ctn-search-box{
+        width: 80%;
+        height: 40px;
+        margin: 6px;
+        display: flex;
+
+        .logo-meli{
+            width: 100px;
+            height: 36px;
+            margin: 0 auto;
+            background-image: url("../../assets/Logo_ML.png");
+            background-repeat: no-repeat;
+        };
+    
+        .header-search-box {
+            width: 100%;
+            height: 35px;
+            margin: auto;
+            background-color: #ffffff;
+            border-radius: 3px 0 0 3px;
+            .input-search {
+                width: 100%;
+                margin: 7px 15px;
+                border: none;
+                outline: none;
+                color: #999999;
+                font-size: 18px;
+            }
+        };
+    
+        .logo-search {
+            width: 50px;
+            height: 35px;
+            margin: auto;
+            border-radius: 0 3px 3px 0;
+            background-color: #eeeeee;
+            background-image: url("../../assets/ic_Search.png");
+            background-repeat: no-repeat;
+            background-position: center;
+        }    
+    }
+
+}
