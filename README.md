@@ -12,5 +12,3 @@ To deploy and run melichallenge_be_me proyect you should type on your terminal:
     $ cd melichallenge
     $ npm i
     $ npm start
-
-# Solution
