@@ -1,0 +1,17 @@
+.ctn-crumbs{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin: 16px auto;
+    .crumbs{
+        display: flex;
+        font-size: 14px;
+        color: #999999;
+    }
+    .arrow {
+        margin: 0 5px;
+    }
+    .arrow.none{
+        display: none;
+    }
+}

@@ -11,6 +11,7 @@
         height: 40px;
         margin: 6px;
         display: flex;
+        max-width: 1040px;
 
         .logo-meli{
             width: 100px;
@@ -25,7 +26,7 @@
             height: 35px;
             margin: auto;
             background-color: #ffffff;
-            border-radius: 3px 0 0 3px;
+            border-radius: 4px 0 0 4px;
             .input-search {
                 width: 100%;
                 margin: 7px 15px;
@@ -40,7 +41,7 @@
             width: 50px;
             height: 35px;
             margin: auto;
-            border-radius: 0 3px 3px 0;
+            border-radius: 0 4px 4px 0;
             background-color: #eeeeee;
             background-image: url("../../assets/ic_Search.png");
             background-repeat: no-repeat;

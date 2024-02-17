@@ -1,0 +1,76 @@
+.page-results {
+    margin: 0;
+    width: 100%;
+
+    .bread-crumbs {
+        >p {
+            margin: 16px 0;
+        }
+        width: 80%;
+        margin: 0 auto; 
+        font-size: 14px;
+        color: #999999;
+    }
+
+    .card-product {
+        background-color: #ffffff;
+        width: 80%;
+        height: 210px;
+        border-radius: 2px;
+        margin: 0 auto;
+        display: flex;
+        border-bottom: #eeeeee 2px solid;
+        padding: 5px;
+        max-width: 1034px;
+
+        .img-product {
+            width: 28%;
+            >img{
+                width: 180px;
+                height: 180px;
+                border-radius: 4px;
+                margin: 16px;
+            }
+        }
+
+        .data-product {
+            width: 57%;
+            height: 80px;
+            margin: 32px 16px;
+            color: #333333;
+            
+
+            .price {
+                display: flex;
+                .value-price {
+                    font-size: 24px;
+                    >p{
+                        margin: 0;
+                    }
+                }
+                
+                .logo-shipping {
+                    width: 20px;
+                    height: 20px;
+                    margin: 16px 0 0 16px;
+                    background-image: url('../../assets/ic_shipping.png');
+                    background-repeat: no-repeat;
+                }
+                
+            }
+
+            .title-product {
+                font-size: 18px;    
+
+            }
+        }
+
+        .location {
+            color: #666666;
+            font-size: 12px;
+            width: 15%;
+            margin: 32px auto;
+        }
+
+    }
+}
