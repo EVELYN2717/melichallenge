@@ -14,5 +14,3 @@ To deploy and run melichallenge_be_me proyect you should type on your terminal:
     $ npm start
 
 # Solution
-
-![Screenshot](FrontEnd.jpeg)
