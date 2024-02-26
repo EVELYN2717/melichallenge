@@ -28,13 +28,14 @@ function ResultSearchPage() {
     }
 
     const getSearchBoxHandle = () => {
-        if (typedSearch.substring(0, 3) === 'MLA') {
-            getItemById(typedSearch).then((res) => {
-                navigate('/itemsid', {state: {itemById:res.data, typed: typedSearch}});
+        const typed = typedSearch.length === 0 ? location.state.typed : typedSearch;
+        if (typed.substring(0, 3) === 'MLA') {
+            getItemById(typed).then((res) => {
+                navigate('/itemsid', {state: {itemById:res.data, typed: typed}});
             });    
         } else {
-            getSearch(typedSearch).then((res) => { 
-                navigate('/itemssearch', {state: {itemById:res.data, typed: typedSearch}});
+            getSearch(typed).then((res) => { 
+                navigate('/itemssearch', {state: {itemById:res.data, typed: typed}});
             });
         }
     }
