@@ -12,16 +12,7 @@ function ProductDetailPage() {
 
     const location = useLocation();
     const navigate = useNavigate();
-    const [categoriesFromSearch, setCategoriesFromSearch] = useState();
-    const [loadContent, setLoadContent] = useState(false);
     const [typedSearch, setTypedSearch] = useState([]);
-    
-    useEffect(() => {
-        getSearch(location.state.itemById.item.category_id).then((res) => { 
-            setCategoriesFromSearch(res.data.categories) 
-            setLoadContent(true);
-        });
-    }, []);
 
     const searchHandle = (typed) => {
         setTypedSearch(typed)
@@ -40,16 +31,15 @@ function ProductDetailPage() {
     }
 
     return (
-        (loadContent && <div class="ctn-main">
-        <div class="ctn-header">
-        <SearchBoxComponent searchHandle={searchHandle} getSearchBoxHandle={getSearchBoxHandle} setTypedSearched={location.state.typed}/>
-        </div>
-        <div class="ctn-body">
-            <BreadCrumbComponent breadCrumbProps={categoriesFromSearch} typeSearchBox={location.state.typed}/>
-            <CardDetailComponent serviceDetail={location.state}/>
-        </div>
-    </div> )
-        
+        <div class="ctn-main">
+            <div class="ctn-header">
+            <SearchBoxComponent searchHandle={searchHandle} getSearchBoxHandle={getSearchBoxHandle} setTypedSearched={location.state.typed}/>
+            </div>
+            <div class="ctn-body">
+                <BreadCrumbComponent breadCrumbProps={location.state.breadCrumbProps} typeSearchBox={location.state.typed}/>
+                <CardDetailComponent serviceDetail={location.state}/>
+            </div>
+        </div> 
     );
 }
 
