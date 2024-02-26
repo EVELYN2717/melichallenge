@@ -1,14 +1,11 @@
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import SearchBoxPage from './pages/searchboxpage';
 import ResultSearchPage from './pages/resultsearch/resultsearch';
 import ProductDetailPage from './pages/productdetail/productdetail';
+import ErrorPage from './pages/errorDefaultPage/errorPage.js';
 
 const App = () => {
-  // const navigate = useNavigate();
-  // const handleClick = () => {
-  //   navigate('/');
-  // }
 
   return (
     <div className="App">
@@ -17,6 +14,7 @@ const App = () => {
         <Route path='/' element = { <SearchBoxPage/> }></Route>
         <Route path='/itemssearch' element = { <ResultSearchPage/> }></Route>
         <Route path='/itemsid' element = { <ProductDetailPage/> }></Route>
+        <Route path='/error' element = { <ErrorPage/> }></Route>
       </Routes>
     </div>
   );

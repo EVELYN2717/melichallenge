@@ -42,7 +42,7 @@ function ProductDetailPage() {
     return (
         (loadContent && <div class="ctn-main">
         <div class="ctn-header">
-        <SearchBoxComponent searchHandle={searchHandle} getSearchBoxHandle={getSearchBoxHandle}/>
+        <SearchBoxComponent searchHandle={searchHandle} getSearchBoxHandle={getSearchBoxHandle} setTypedSearched={location.state.typed}/>
         </div>
         <div class="ctn-body">
             <BreadCrumbComponent breadCrumbProps={categoriesFromSearch} typeSearchBox={location.state.typed}/>

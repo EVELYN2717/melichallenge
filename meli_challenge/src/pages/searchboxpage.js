@@ -16,10 +16,16 @@ function SearchBoxPage() {
         if (typedSearch.substring(0, 3) === 'MLA') {
             getItemById(typedSearch).then((res) => {
                 navigate('/itemsid', {state: {itemById:res.data, typed: typedSearch}});
+            }, (err) => {
+                navigate('/error');  
+                console.log('ERROR get Item by Id ',err);
             });    
         } else {
             getSearch(typedSearch).then((res) => { 
                 navigate('/itemssearch', {state: {itemById:res.data, typed: typedSearch}});
+            }, (err) => {
+                navigate('/error');
+                console.log('ERROR get search ',err);
             });
         }
     }
