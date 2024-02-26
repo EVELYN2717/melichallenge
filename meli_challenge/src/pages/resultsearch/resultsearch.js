@@ -17,7 +17,8 @@ function ResultSearchPage() {
     
     const getDetailProdHandle = (idProduct) => {   
         getItemById(idProduct).then((res) => {
-            navigate('/itemsid', {state: {itemById: res.data, typed: location.state.typed, searchResponse: location.state.itemById.categories}})
+            navigate('/itemsid', {state: {itemById: res.data, 
+                typed: location.state.typed}})
         })  
     }
 
