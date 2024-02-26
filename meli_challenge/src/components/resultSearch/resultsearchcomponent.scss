@@ -31,6 +31,9 @@
                 border-radius: 4px;
                 margin: 16px;
             }
+            >img:hover{
+                cursor: pointer;
+            }
         }
 
         .data-product {
@@ -61,7 +64,9 @@
 
             .title-product {
                 font-size: 18px;    
-
+            }
+            .title-product:hover{
+                cursor: pointer;
             }
         }
 
